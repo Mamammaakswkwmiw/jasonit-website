@@ -1,22 +1,29 @@
 [build]
   publish = "."
+  command = ""
 
 [[redirects]]
   from = "/home"
   to = "/index.html"
-  status = 301
+  status = 200
 
 [[redirects]]
   from = "/about"
   to = "/about.html"
-  status = 301
+  status = 200
 
 [[redirects]]
   from = "/courses"
   to = "/courses.html"
-  status = 301
+  status = 200
 
 [[redirects]]
   from = "/contact"
   to = "/contact.html"
-  status = 301
+  status = 200
+
+# Catch-all for single-page app routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
